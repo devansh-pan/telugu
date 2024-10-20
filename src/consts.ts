@@ -3,7 +3,7 @@ import type { Metadata, Site, Socials } from "@types";
 export const SITE: Site = {
   TITLE: "Telugu Lokam",
   DESCRIPTION: "Welcome to telugu lokam site.",
-  EMAIL: "trevortylerlee@gmail.com",
+  EMAIL: "vidkri1504@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 5,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
 };
