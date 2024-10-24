@@ -22,4 +22,16 @@ const projects = defineCollection({
   }),
 });
 
-export const collections = { blog, projects };
+
+const authors = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    bio: z.string(),
+    image: z.string().optional(),
+  }),
+});
+
+
+
+export const collections = { blog, projects, authors };
