@@ -7,16 +7,35 @@ import { SITE } from "@consts";
 
 <Layout title="Author:Devesh" description={SITE.DESCRIPTION}>
   <Container>
-    <div class="mt-16 grid place-items-center gap-3">
-      <h2 class="animate text-2xl font-semibold text-black dark:text-white">
-        Author: Devesh
-      </h2>
-      <span class="animate">
+<div class="mt-16 grid place-items-center gap-3" itemscope itemtype="https://schema.org/Person">
+  <h1 class="animate text-2xl font-semibold text-black dark:text-white">
+<span itemprop="name">Devesh</span></h1>
+  <img src="janedoe.jpg" itemprop="image" alt="Photo of Devesh"/>
+
+  <span itemprop="jobTitle">Blogger</span>
+  <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+    <span itemprop="streetAddress">
+      20341 Whitworth Institute
+      405 N. Whitworth
+    </span>
+    <span itemprop="addressLocality">Hyderabad</span>,
+    <span itemprop="addressRegion">IN</span>
+    <span itemprop="postalCode">500034</span>
+  </div>
+  
+  <a href="mailto:vidkri1504@gmail.com" itemprop="email">
+    vidkri1504@gmail.com</a>
+
+  Devesh's home page:
+  <a href="https://www.telugulokam.vercel.app" itemprop="url">telugulokam.vercel.app</a>
+<span class="animate">
         Devesh lives in Telangana, India.He always wants spend his time watching 
         YouTube, reading epapers , reading blogs about  web development, new web frameworks. 
         He is also into spiritual enlightenment, meditation and bhakti yoga.
         
       </span>
-    </div>
+</div>
+      
+    
   </Container>
 </Layout>
