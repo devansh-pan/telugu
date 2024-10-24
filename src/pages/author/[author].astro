@@ -13,7 +13,7 @@ export function getStaticPaths() {
 
 const { author } = Astro.params;
 ---
-<Layout title='{author}' description='{author}'>
+<Layout title={author} description={author}>
 <Container>
 <h1>Good dog, {author}!</h1>
 </Container>
