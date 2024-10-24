@@ -4,7 +4,7 @@ import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { getCollection } from 'astro:content';
 import allAuthors from '../../content/authors.json';  // Import all authors
-
+import { slugify } from "@lib/utils";
 // Generate static paths for each author in the JSON file
 export async function getStaticPaths() {
   const posts = await getCollection('blog');  // Fetch all blog posts (optional, for extra checks)
