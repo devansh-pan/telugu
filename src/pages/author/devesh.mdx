@@ -1,0 +1,22 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/Container.astro";
+import BackToPrevious from "@components/BackToPrevious.astro";
+import { SITE } from "@consts";
+---
+
+<Layout title="Author:Devesh" description={SITE.DESCRIPTION}>
+  <Container>
+    <div class="mt-16 grid place-items-center gap-3">
+      <h2 class="animate text-2xl font-semibold text-black dark:text-white">
+        Author: Devesh
+      </h2>
+      <span class="animate">
+        Devesh lives in Telangana, India.He always wants spend his time watching 
+        YouTube, reading epapers , reading blogs about  web development, new web frameworks. 
+        He is also into spiritual enlightenment, meditation and bhakti yoga.
+        
+      </span>
+    </div>
+  </Container>
+</Layout>
