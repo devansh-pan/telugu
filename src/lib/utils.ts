@@ -20,7 +20,7 @@ export function readingTime(html: string) {
   return `${readingTimeMinutes} min read`;
 }
 // src/utils/slugify.js
-export function slugify(tag) {
+export function slugify(tag: string) {
   return tag
     .toLowerCase()
     .replace(/\s+/g, '-') // Replace spaces with dashes
