@@ -1,0 +1,12 @@
+{
+  "jane-doe": {
+    "name": "Jane Doe",
+    "bio": "Jane is a frontend developer specializing in React and Astro.js.",
+    "avatar": "/images/jane-doe.jpg"
+  },
+  "john-smith": {
+    "name": "John Smith",
+    "bio": "John is a backend developer focusing on Node.js and serverless technologies.",
+    "avatar": "/images/john-smith.jpg"
+  }
+}
