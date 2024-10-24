@@ -23,15 +23,6 @@ const projects = defineCollection({
 });
 
 
-const authors = defineCollection({
-  type: 'data',
-  schema: z.object({
-    name: z.string(),
-    bio: z.string(),
-    image: z.string().optional(),
-  }),
-});
 
 
-
-export const collections = { blog, projects, authors };
+export const collections = { blog, projects };
