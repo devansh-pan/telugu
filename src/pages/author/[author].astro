@@ -3,18 +3,35 @@ import Layout from "@layouts/Layout.astro";
 import Container from "@components/Container.astro";
 import FormattedDate from "@components/FormattedDate.astro";
 import { readingTime } from "@lib/utils";
-export function getStaticPaths() {
-  return [
-    {params: {author: 'clifford'}},
-    {params: {author: 'rover'}},
-    {params: {author: 'spot'}},
-  ];
-}
+import { getCollection } from 'astro:content';
+import allAuthors from '../../content/authors.json';  // Import the JSON file with all author data
 
-const { author } = Astro.params;
+const { author } = Astro.params;  // Get author slug from the route params
+const posts = await getCollection('blog', ({ author: postAuthor }) => postAuthor === author);  // Get posts by this author
+const authorInfo = allAuthors[author];  // Get the author data from the JSON file
 ---
-<Layout title={author} description={author}>
+
+<!-- Check if the author exists -->
+{authorInfo ? (
+  <>
+    <!-- Author Details -->
+    <h1>{authorInfo.name}</h1>
+    <p>{authorInfo.bio}</p>
+    <img src={authorInfo.avatar} alt={authorInfo.name} width="150" />
+
+    <!-- List of Posts by Author -->
+    <h2>Posts by {authorInfo.name}</h2>
+    <ul>
+      {posts.map((post) => (
+        <li><a href={post.url}>{post.title}</a></li>
+      ))}
+    </ul>
+  </>
+) : (
+  <p>Author not found.</p>
+)}
+<Layout title= description=>
 <Container>
-<h1>Good dog, {author}!</h1>
+<h1>Goodnight !</h1>
 </Container>
 </Layout>
