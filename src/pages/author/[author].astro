@@ -11,14 +11,14 @@ export async function getStaticPaths() {
   const authors = Object.keys(allAuthors);    // Get all author slugs from the JSON file
 
   return authors.map((author) => ({
-    params: { author },   // Create paths for each author using their slug (JSON keys)
+    params: { author: slugify(author) },   // Create paths for each author using their slug (JSON keys)
     props: { author },    // Pass the author slug as props to be used in the template
   }));
 }
 
 // Fetch author-specific data
 const { author } = Astro.params;  // Get author slug from the route params
-const posts = await getCollection('blog', ({ author: postAuthor }) => postAuthor === author);  // Get posts by this author
+const posts = await getCollection('blog', ({ author: postAuthor }) => slugify(postAuthor) === author);  // Get posts by this author
 const authorInfo = allAuthors[author];  // Get the author data from the JSON file
 ---
 
