@@ -73,7 +73,7 @@ const { Content, headings } = await post.render();
 <span><a href="/author/devesh" >Devesh</a></span>
     </div>
     {headings.length > 0 && <TableOfContents headings={headings} />}
-    <article class="animate">
+    <article class="animate text-sm">
       <Content />
       <div class="mt-24">
         <PostNavigation prevPost={prevPost} nextPost={nextPost} />
